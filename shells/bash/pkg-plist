@@ -1,4 +1,5 @@
 @shell bin/bash
+../../bin/bash
 bin/bashbug
 @shell bin/rbash
 %%NO_STATIC%%include/bash/alias.h

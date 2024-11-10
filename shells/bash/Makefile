@@ -104,6 +104,8 @@ pre-build:
 
 post-install:
 	${LN} -sf bash ${STAGEDIR}${PREFIX}/bin/rbash
+	@${MKDIR} ${STAGEDIR}/bin
+	${LN} -sf ..${PREFIX}/bin/bash ${STAGEDIR}/bin
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/FAQ \
 		${WRKSRC}/doc/INTRO ${STAGEDIR}${DOCSDIR}
